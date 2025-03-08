@@ -24,6 +24,9 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <logback-gelf.version>3.0.0</logback-gelf.version>
+        <log-record-starter.version>1.0.4.1</log-record-starter.version>
     </properties>
 
     <parent>
@@ -54,6 +57,20 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>1.2.83</version>
+            </dependency>
+
+            <!--graylog-->
+            <dependency>
+                <groupId>de.siegmar</groupId>
+                <artifactId>logback-gelf</artifactId>
+                <version>${logback-gelf.version}</version>
+            </dependency>
+
+            <!--注解打印日志-->
+            <dependency>
+                <groupId>cn.monitor4all</groupId>
+                <artifactId>log-record-starter</artifactId>
+                <version>${log-record-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
